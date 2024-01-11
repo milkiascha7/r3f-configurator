@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap");
+
+.app {
+  width: 100vw !important;
+  height: 100vh !important;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+.configurator{
+  position: fixed;
+  right: 24px;
+  top: 60px;
+  /* bottom: 4vh; */
+  width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.configurator__section__title{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 24px;
+}
+
+.configurator__section__values{
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  margin: 10px 0;
+}
+
+.item__label{
+  font-size: 14px;
+  transition: 0.4s color;
+  font-weight: 200;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .4s opacity;
+  gap: 4px;
+}
+
+.item:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.item.item--active .item__label{
+  color: white;
+}
+.item.item--notactive .item__label{
+  color: gray;
+}
+
+.item__dot{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  text-transform: uppercase;
+  border: 2px solid gray;
+}
+
+.item.item--active .item__dot{
+  border: 2px solid white;
+}
